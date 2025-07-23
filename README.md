@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <img width="991" alt="image" src="https://github.com/user-attachments/assets/fb8cfae2-ba6f-4348-987e-04ab46d7bfd0">
 
 ![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
@@ -54,3 +55,7 @@ pip install -r requirements.txt
 GEMINI_API_KEY = "SUA_CHAVE_AQUI"
 MARITACA_API_KEY = "SUA_CHAVE_AQUI"
 ```
+=======
+# llm-agents-langchain
+Projeto em Python usando LangChain, Gemini e Maritaca para integração com LLMs e IA Multimodal.
+>>>>>>> 23e64dc3aca8e5f49f245973d096b6265f4c39c8
