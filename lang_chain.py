@@ -6,6 +6,8 @@ from my_keys import GEMINI_API_KEY, MARITACA_API_KEY
 from my_helper import encode_image
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain.globals import set_debug
+set_debug(True)
 
 llm = ChatGoogleGenerativeAI(
     api_key=GEMINI_API_KEY,
@@ -70,4 +72,5 @@ cadeia_resumo = template_resposta | llm_maritaca | StrOutputParser()
 cadeia_completa = (cadeia_analise_imagem | cadeia_resumo)
 
 resposta = cadeia_completa.invoke({"imagem_informada": imagem})
+
 print(resposta)
