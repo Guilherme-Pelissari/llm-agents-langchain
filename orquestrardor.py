@@ -6,7 +6,8 @@ set_debug(False)
 
 from langchain import hub
 from langchain.agents import create_react_agent
-from langchain.agents import tool
+from langchain.agents import Tool
+from ferramenta_analisadora_imagem import FerramentaAnalisadorImagem
 
 class AgenteOrquestrador:
     def __init__(self):
@@ -15,10 +16,10 @@ class AgenteOrquestrador:
             model=GEMINI_FLASH
         )
 
-        ferramenta_analisadora_imagem = None
+        ferramenta_analisadora_imagem = FerramentaAnalisadorImagem()
 
         self.tools = [
-            tool(
+            Tool(
                 name = ferramenta_analisadora_imagem.name,
                 func = ferramenta_analisadora_imagem.run,
                 description = ferramenta_analisadora_imagem.description,
